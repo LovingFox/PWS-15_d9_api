@@ -27,7 +27,7 @@ SECRET_KEY = 'eq4!y)j4h=)xb$cd@leu=m-1)oczmip+b77v@b-q0)i2z8p9@p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'whispering-reef-52117.herokuapp.com']
 
 
 # Application definition
