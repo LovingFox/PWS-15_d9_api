@@ -126,3 +126,10 @@ Allow: GET, HEAD, OPTIONS
     }
 ]
 ```
+
+## Админка
+/admin
+
+admin
+
+pass
