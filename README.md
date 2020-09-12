@@ -33,6 +33,7 @@ $ python manage.py runserver
 
 #### Категории
 API: /categories/
+
 Allow: GET, POST, HEAD, OPTIONS
 
 Пример содержания для POST создания новой Категории:
@@ -43,6 +44,7 @@ Allow: GET, POST, HEAD, OPTIONS
 ```
 
 API: /categories/<cat_id>
+
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
 Пример ответа GET /categories/1:
@@ -57,6 +59,7 @@ Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 Для GET и для POST/PUT/PATCH "Постов" используются разные сериализаторы вложенных объектов. Для GET сериализатор вложенных объектов будет выводить все их данные, а для POST/PUT/PATCH десериализатор для вложенных элементов принимает только их id.
 
 API: /
+
 Allow: GET, POST, HEAD, OPTIONS
 
 Пример содержания для POST нового Поста:
@@ -71,6 +74,7 @@ Allow: GET, POST, HEAD, OPTIONS
 ```
 
 API: /<post_id>
+
 Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
 Пример ответа GET /1:
@@ -100,7 +104,9 @@ Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
 
 
 API: /authors/
+
 API: /authors/<author_id>
+
 Allow: GET, HEAD, OPTIONS
 
 Пример ответа на GET /authors/
