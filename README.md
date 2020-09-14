@@ -5,14 +5,16 @@ https://whispering-reef-52117.herokuapp.com/
 
 ## Установка и запуск (все действия через коммандную строку)
   - скачать проект и перейти в директорию проекта
-  ```
+```
 $ git clone https://github.com/LovingFox/PWS-15_d9_api
 $ cd PWS-15_d9_api
 ```
+
   - создать виртуальное окружение
-  ```
+```
 $ python -m venv env
 ```
+
   - применить виртуальное окружение
 ```
 ### Если у вас Linux:
@@ -20,15 +22,22 @@ $ source env/bin/activate
 ### Если у вас Windows:
 $ env\Scripts\activate.bat
 ```
+
  - установить зависимости
-  ```
+```
 $ pip install -r requirements.txt
 ```
 
+  - загрузить фикстуры в качестве примеров
+```
+$ python manage.py loaddata data.json
+```
+
   - запустить сервер
-  ```
+```
 $ python manage.py runserver
 ```
+
 ## Использование
 
 #### Категории
