@@ -22,6 +22,15 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class CategorySerializerNoPosts(serializers.ModelSerializer):
+    """
+    Сериализатор для Категорий без списка постов
+    """
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+
 class PostSerializer(serializers.ModelSerializer):
     """
     Сериализатор Постов для режимы вывода (GET)
@@ -29,7 +38,7 @@ class PostSerializer(serializers.ModelSerializer):
     для _User_ и _Category_
     """
     author = AuthorSerializer()
-    category = CategorySerializer()
+    category = CategorySerializerNoPosts()
     class Meta:
         model = Post
         fields = '__all__'
