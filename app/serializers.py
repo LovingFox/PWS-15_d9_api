@@ -16,6 +16,7 @@ class CategorySerializer(serializers.ModelSerializer):
     """
     Сериализатор для Категорий
     """
+    posts = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model = Category
         fields = '__all__'

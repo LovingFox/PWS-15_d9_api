@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=255)
+
     def __str__(self):
         return self.name
 
@@ -16,6 +17,8 @@ class Post(models.Model):
     content = models.TextField()
     updated = models.DateTimeField(default=timezone.now)
     publication_date = models.DateTimeField(default=timezone.now)
-    category = models.ForeignKey(Category, null=True, default=None, on_delete=models.SET_NULL)
-    author = models.ForeignKey(User, null=True, default=None, on_delete=models.SET_NULL)
+    category = models.ForeignKey(Category, null=True, default=None, on_delete=models.SET_NULL, related_name='posts')
+    author = models.ForeignKey(User, null=True, default=None, on_delete=models.SET_NULL, related_name='posts')
 
+    def __str__(self):
+        return self.title
